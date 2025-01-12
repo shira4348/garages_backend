@@ -1,0 +1,48 @@
+###Get token
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "a@a.a",
+  "password": "123456"
+}
+
+### A simple GET Request
+# Get list of government-garages APIs
+GET http://localhost:3000/api/garages/government-garages
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ODJmNTcyOTE0ODFlMjQ3Y2JiNjEzOSIsImVtYWlsIjoiYUBhLmEiLCJpYXQiOjE3MzY2NzQ2NTQsImV4cCI6MTczNjY3ODI1NH0.OdQbmNB4YN8Yc8miy7Oe6LgQtkl_ig-4la16Pg_NIl8
+
+
+### Save Garages
+POST http://localhost:3000/api/garages/save-garages
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ODJmNTcyOTE0ODFlMjQ3Y2JiNjEzOSIsImVtYWlsIjoiYUBhLmEiLCJpYXQiOjE3MzY2NzQ2NTQsImV4cCI6MTczNjY3ODI1NH0.OdQbmNB4YN8Yc8miy7Oe6LgQtkl_ig-4la16Pg_NIl8
+
+{
+  "garages": [
+    { "_id":2,
+      "mispar_mosah": 16,
+      "shem_mosah": "נירים מוסך הקבוץ",
+      "cod_sug_mosah": 6,
+      "sug_mosah": "מוסך מורשה",
+      "ktovet": "ד.נ. הנגב",
+      "yishuv": "נירים",
+      "telephone": "054-7916219",
+      "mikud": 85125,
+      "cod_miktzoa": 10,
+      "miktzoa": "מכונאות רכב בנזין",
+      "menahel_miktzoa": "אליהו ציון",
+      "rasham_havarot": 570005926,
+      "TESTIME": ""
+  }
+  ]
+}
+
+### Get list of DB garages
+GET http://localhost:3000/api/garages/app-garages
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ODJmNTcyOTE0ODFlMjQ3Y2JiNjEzOSIsImVtYWlsIjoiYUBhLmEiLCJpYXQiOjE3MzY2NzQ2NTQsImV4cCI6MTczNjY3ODI1NH0.OdQbmNB4YN8Yc8miy7Oe6LgQtkl_ig-4la16Pg_NIl8
+
+
+### delete
+DELETE http://localhost:3000/api/garages/delete-garage/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ODJmNTcyOTE0ODFlMjQ3Y2JiNjEzOSIsImVtYWlsIjoiYUBhLmEiLCJpYXQiOjE3MzY2NzQ2NTQsImV4cCI6MTczNjY3ODI1NH0.OdQbmNB4YN8Yc8miy7Oe6LgQtkl_ig-4la16Pg_NIl8
