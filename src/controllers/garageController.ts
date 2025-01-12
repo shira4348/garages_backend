@@ -32,9 +32,9 @@ export const saveGarages = async (req: Request, res: Response): Promise<any>  =>
 
     const { error } = garageValidationSchema.validate(garages);
    
-    // if (error) {
-    //   return res.status(400).json({ error: error.details[0].message });
-    // }
+    if (error) {
+      return res.status(400).json({ error: error.details[0].message });
+    }
 
     const savedGarages = await saveGaragesToDB(garages);
     res.status(201).json(savedGarages);
